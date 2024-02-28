@@ -1,0 +1,320 @@
+#include <stdio.h>
+#include <math.h>
+int add(int x,int y)
+{
+int c= x+y;
+return c;
+}
+int mul(int x,int y)
+{
+int c=x*y;
+return c;
+}
+int sub(int x, int y)
+{
+int c=x-y;
+return c;
+}
+float div(float x, float y)
+{
+float c=x/y;
+return c;
+}
+int mod(int x, int y)
+{
+int c=x%y;
+return c;
+}
+int square(int x)
+{
+int z=x*x;
+return z;
+}
+float sqroot(float x)
+{
+float z=sqrt(x);
+return z;
+}
+int power(int x,int y)
+{
+int z=pow(x,y);
+return z;
+}
+double reci(double x)
+{
+double z = 1/x;
+return z;
+}
+int fact(int m)
+{
+
+int i=1;
+int p =1;
+while (i<=m)
+{
+p=p*i;
+i=i+1;
+}
+return p;
+}
+float R2D(float x)
+{
+
+printf("Enter the amount in dollars :");
+scanf("%f",&x);
+printf("\n");
+float z=x*75;
+return z;
+
+}
+float D2R(float x)
+{
+printf("Enter Rupees");
+scanf("%f",&x);
+float z=x/75;
+return z;
+}
+int dec2bin(int c)
+{
+int d;
+printf("Enter the number to be converted to binary :");
+scanf("%d",&c);
+printf("\n");
+int r=c;
+int i=1;
+int sum1=0;
+while (c>0)
+{
+d=c%2;
+sum1=sum1+(d*i);
+c=c/2;
+i=i*10;
+}
+return sum1;
+}
+int dec2oct(int u)
+{
+int t;
+printf("Enter the number to be converted to octanary:");
+scanf("%d",&u);
+printf("\n");
+int cd=u;
+int i=1;
+int sum=0;
+while (u>0)
+
+{
+t=u%8;
+sum=sum+(t*i);
+u=u/8;
+i=i*10;
+}
+return sum;
+}
+void main()
+{
+printf(" CALCULATOR \n");
+
+/* Printing the menu */
+
+printf(" ______________ \n");
+printf(" \n");
+printf("1.ADD 2.SUBTRACT 3.MULTIPLY(x*y) 4. DIVIDE(X/Y)
+5.MODULUS\n");
+printf("6.SQUARE 7.SQRT(X) 8.POWER 9. 1/X
+10.FACTORIAL\n");
+printf("11.$ TO Rs 12.Rs TO $ 13.DEC TO BIN 14. DEC TO OCT 15.EXIT\n");
+printf(" \n");
+int rt =1;
+while (rt==1)
+{
+int ch;
+printf("Enter your choice:");
+scanf("%d",&ch);
+switch(ch)
+{
+default:
+{
+printf("invalid entry");
+printf("\n");
+break;
+}
+case 1:
+{
+int a;
+int b;
+printf("Enter First number :");
+scanf("%d",&a);
+printf("\n");
+printf("Enter the second number :");
+scanf("%d",&b);
+printf("\n");
+int c= add(a,b);
+printf("the sum is %d",c);
+printf("\n");
+break;
+}
+
+case 2:
+{
+int a;
+int b;
+printf("Enter First number :");
+scanf("%d",&a);
+printf("\n");
+printf("Enter the second number :");
+scanf("%d",&b);
+printf("\n");
+int c=sub(a,b);
+printf("the difference is%d",c);
+printf("\n");
+break;
+}
+case 3:
+{
+int a;
+int b;
+printf("Enter First number :");
+scanf("%d",&a);
+printf("\n");
+printf("Enter the second number :");
+scanf("%d",&b);
+printf("\n");
+int c=mul(a,b);
+printf("the product is%d",c);
+printf("\n");
+break;
+}
+case 4:
+{
+float a;
+float b;
+printf("Enter First number :");
+scanf("%f",&a);
+printf("\n");
+printf("Enter the second number :");
+scanf("%f",&b);
+printf("\n");
+float c=div(a,b);
+printf("the qoutient is%f",c);
+printf("\n");
+break;
+}
+case 5:
+{
+int a;
+int b;
+printf("Enter First number :");
+scanf("%d",&a);
+
+printf("\n");
+printf("Enter the second number :");
+scanf("%d",&b);
+printf("\n");
+int c=mod(a,b);
+printf("the remainder is%d",c);
+printf("\n");
+break;
+}
+case 6:
+{
+int c;
+printf("Enter the number you have to square:");
+scanf("%d",&c);
+printf("\n");
+int z= square(c);
+printf("The square of %d is %d",c,z);
+printf("\n");
+break;
+}
+case 7:
+{
+float e;
+printf("Enter the number you have to square root :");
+scanf("%f",&e);
+float x=sqroot(e);
+printf("the square root of %f is %f",e,x);
+printf("\n");
+break;
+}
+case 8:
+{
+int g;
+int s;
+printf("Enter the number :");
+scanf("%d",&g);
+printf("\n");
+printf("Enter the number to which the number should be raised to :");
+scanf("%d",&s);
+printf("\n");
+int z=pow(g,s);
+printf("%d when raised to %d gives %d",g,s,z);
+printf("\n");
+break;
+}
+case 9:
+{
+double h;
+printf("Enter the number :");
+scanf("%lf",&h);
+printf("\n");
+double k = reci(h);
+
+printf("The reciprocal is : %lf", k);
+printf("\n");
+break;
+}
+case 10:
+{
+int m;
+printf("Enter the number whose factorial is to be found :");
+scanf("%d",&m);
+printf("\n");
+int g=fact(m);
+printf("The factorial of %d is %d",m,g);
+printf("\n");
+break;
+}
+case 11:
+{
+float x;
+printf("%f",R2D(x));
+printf("\n");
+break;
+}
+case 12:
+{
+float x;
+printf("%f",D2R(x));
+printf("\n");
+break;
+}
+case 13:
+{
+int c;
+printf("%d",dec2bin(c));
+printf("\n");
+break;
+}
+case 14:
+{
+int u;
+printf("%d",dec2oct(u));
+printf("\n");
+break;
+}
+case 15:
+{
+printf("\n");
+break;
+}
+}
+printf("Would you like to check again ?(1(Yes)/0(No)):");
+scanf("%d",&rt);
+
+}
+printf("Thankyou !");
+printf("
+\n");
+
+}
